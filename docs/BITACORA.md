@@ -19,6 +19,8 @@ Este archivo aún no satisface los cinco prompts ni sustituye la reflexión de l
 
 **Respuesta:** actualización del plan: solicitud anterior denegada y nueva solicitud en revisión; continuar el desarrollo. **¿Funcionó a la primera?** Se registró el estado comunicado; falta verificarlo mediante captura. **Ajuste:** no presentar Pro como activo.
 
+**Resultado de la implementación posterior:** aplicación en HTML, CSS y JavaScript, peticiones a TheMealDB, búsqueda, categorías, detalle y aleatorio. Las 11 pruebas automatizadas pasaron. Se verificaron consultas reales en navegador. En la revisión visual, la IA detectó y corrigió un desbordamiento horizontal de la decoración; el detalle está en PRUEBAS.md. Este hallazgo lo detectó la IA, por lo que no se atribuye a la estudiante.
+
 ## Próximas entradas — pendientes
 
 Registrar al menos tres prompts adicionales que la estudiante realmente envíe durante revisión, pruebas o aprendizaje del código. Para cada uno: texto literal, respuesta resumida, si funcionó a la primera y cambio necesario. Si el docente espera cinco prompts técnicos, usar cinco consultas reales sobre programación y conservar estas entradas como contexto.

@@ -17,9 +17,9 @@ Fuente: Tarea-3.pdf proporcionado por la estudiante. El documento exige una apli
 - [ ] Captura del estado actual del Student Pack y aviso al docente.
 - [x] Enlace al perfil y al repositorio.
 - [x] README con declaración de IA.
-- [ ] Aplicación funcional que consume API y muestra resultados.
-- [ ] Manejo comprobado de errores.
-- [ ] Varios commits publicados durante el desarrollo.
+- [x] Aplicación funcional que consume API y muestra resultados.
+- [x] Manejo comprobado de errores (simulaciones automatizadas; ver PRUEBAS.md).
+- [x] Varios commits publicados durante el desarrollo.
 - [ ] Cinco prompts reales y reflexión personal en bitácora final.
 - [ ] Demostración preparada por la estudiante.
 

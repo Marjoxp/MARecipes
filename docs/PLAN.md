@@ -14,6 +14,8 @@ Fuente: Tarea-3.pdf proporcionado por la estudiante. El documento exige una apli
 
 ## Lista final
 
+La revisión detallada, las evidencias y los pendientes están en [CHECKLIST.md](CHECKLIST.md).
+
 - [ ] Captura del estado actual del Student Pack y aviso al docente.
 - [x] Enlace al perfil y al repositorio.
 - [x] README con declaración de IA.

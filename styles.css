@@ -487,12 +487,27 @@ h2 {
   transform:translateY(-4px);
   box-shadow:0 12px 22px #203e3210
 }
+.recipe-image-button {
+  display:block;
+  width:100%;
+  padding:0;
+  border:0;
+  overflow:hidden;
+  background:#e8e8db
+}
+.recipe-image-button:focus-visible {
+  outline-offset:-4px
+}
+.recipe-image-button:hover .recipe-image {
+  transform:scale(1.035)
+}
 .recipe-image {
   width:100%;
   aspect-ratio:1.45;
   object-fit:cover;
   background:#e8e8db;
-  display:block
+  display:block;
+  transition:transform .3s ease
 }
 .card-copy {
   padding:20px

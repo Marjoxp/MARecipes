@@ -5,6 +5,7 @@ Proyecto académico de Marjoxp: una página para descubrir recetas y consultar s
 - Repositorio: https://github.com/Marjoxp/MARecipes
 - Perfil: https://github.com/Marjoxp
 - Plan de trabajo y requisitos: [docs/PLAN.md](docs/PLAN.md)
+- Checklist de cumplimiento y pendientes: [docs/CHECKLIST.md](docs/CHECKLIST.md)
 - Registro de IA: [docs/BITACORA.md](docs/BITACORA.md)
 
 ![Vista de las recetas de MARecipes](docs/images/recetas.jpg)
@@ -40,6 +41,7 @@ Abrir http://127.0.0.1:5173. Detener el servidor con Ctrl+C. En PowerShell, si u
 - Búsqueda por nombre en inglés, por ejemplo `chicken`, `pasta` o `cake`.
 - Filtros por pollo, mariscos, recetas vegetarianas, pasta y postres.
 - Detalle con ingredientes, medidas, preparación y enlaces del proveedor cuando existen.
+- Acceso al detalle desde la imagen o desde “Ver receta”, también mediante teclado.
 - Receta aleatoria con “Sorpréndeme”.
 - Estados de carga, sin resultados, error de conexión, tiempo de espera, respuesta inválida y HTTP 429, con reintento.
 - Diseño adaptable y diálogo que se puede cerrar con Escape.

@@ -22,6 +22,8 @@ Se inyectan respuestas simuladas para comprobar fallos sin saturar la API. Estas
 
 ## Comprobaciones reales
 
+Actualización de interacción: se abrió Chicken Handi desde la imagen y con Enter, se cerró con Escape y el foco volvió al botón de imagen. “Ver receta” también abrió el detalle con ingredientes. Se guardó evidencia en docs/images/detalle-receta.jpg. Las 11 pruebas API y la revisión de sintaxis se repitieron y aprobaron después del cambio. La imagen y el botón comparten la misma función de detalle; no se dispara una petición adicional por hacer clic en la imagen.
+
 - Servidor local: respuesta HTTP 200 en `http://127.0.0.1:5173`.
 - Navegador: carga real de 25 resultados para `chicken` en esta sesión. El número puede cambiar.
 - Detalle: Chicken Handi mostró ingredientes, medidas, preparación y enlace de video.

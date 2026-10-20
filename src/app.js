@@ -48,16 +48,23 @@ function renderCards(meals) {
   recipes.replaceChildren();
   meals.forEach(meal => {
     const card = element('article', 'recipe-card');
+    const imageButton = element('button', 'recipe-image-button');
+    imageButton.type = 'button';
+    imageButton.setAttribute('aria-label', `Abrir receta: ${meal.strMeal}`);
+    imageButton.setAttribute('aria-haspopup', 'dialog');
+    imageButton.append(mealImage(meal, 'recipe-image'));
+    imageButton.addEventListener('click', () => openRecipe(meal.idMeal, imageButton));
     const copy = element('div', 'card-copy');
     copy.append(element('span', 'card-category', [meal.strCategory || selectedCategory || 'Receta', meal.strArea].filter(Boolean).join(' · ')));
     copy.append(element('h4', '', meal.strMeal));
     const button = element('button', '', 'Ver receta');
     button.type = 'button';
     button.setAttribute('aria-label', `Ver receta: ${meal.strMeal}`);
+    button.setAttribute('aria-haspopup', 'dialog');
     button.append(element('span', '', '↗'));
     button.addEventListener('click', () => openRecipe(meal.idMeal, button));
     copy.append(button);
-    card.append(mealImage(meal, 'recipe-image'), copy);
+    card.append(imageButton, copy);
     recipes.append(card);
   });
 }

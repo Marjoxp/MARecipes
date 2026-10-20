@@ -1,7 +1,7 @@
 # Bitácora de programación con IA — borrador
 
 Fecha de inicio: 19 de octubre de 2026. Herramienta: Codex de OpenAI.
-Este archivo aún no satisface los cinco prompts ni sustituye la reflexión de la estudiante. Al cerrar el proyecto, resumir a 1–2 páginas.
+Este archivo contiene cuatro entradas reales, aún no satisface los cinco prompts ni sustituye la reflexión de la estudiante. Al cerrar el proyecto, resumir a 1–2 páginas.
 
 ## Entrada 1 — petición inicial real
 
@@ -33,13 +33,25 @@ Este archivo aún no satisface los cinco prompts ni sustituye la reflexión de l
 
 **Aportación de la estudiante:** revisión visual de la primera versión, identificación del exceso de espacio lateral y propuesta de alinear los textos y animar el plato.
 
+## Entrada 4 — interacción de imágenes y checklist
+
+**Prompt literal:**
+
+> haz que igual al dar click sobre la imagen de cada receta se pueda acceder, simplemente siento que es más intuitivo, no quites el botón de ver receta de todas maneras, y hagamos un checklis del proyecto para ver si se realizaron todos los requisitos y de manera eficiente y completa
+
+**Respuesta:** imagen dentro de un botón nativo que abre el mismo detalle y conserva “Ver receta”. Se añadió un checklist de requisitos con evidencias y pendientes, más una revisión de eficiencia acorde al alcance de la tarea.
+
+**¿Funcionó a la primera?** La sintaxis y las 11 pruebas API pasaron. En navegador se comprobó apertura desde imagen, apertura con Enter, cierre con Escape y retorno del foco; también se comprobó que “Ver receta” sigue abriendo ingredientes. No fue necesario corregir esta interacción después de esas comprobaciones.
+
+**Hallazgo de la autora y corrección:** la versión generada por IA solo abría el detalle desde “Ver receta”; la imagen no era interactiva. La autora señaló esa limitación de usabilidad. Se envolvió la imagen en un botón con nombre accesible, foco visible y el mismo manejador de apertura, sin retirar la acción anterior. Falta que la autora describa en sus palabras su detección y validación.
+
 ## Próximas entradas — pendientes
 
-Registrar al menos dos prompts adicionales que la estudiante realmente envíe durante revisión, pruebas o aprendizaje del código. Para cada uno: texto literal, respuesta resumida, si funcionó a la primera y cambio necesario. Si el docente espera cinco prompts técnicos, usar cinco consultas reales sobre programación y conservar estas entradas como contexto.
+Registrar al menos un prompt adicional que la estudiante realmente envíe durante revisión, pruebas o aprendizaje del código. Para cada uno: texto literal, respuesta resumida, si funcionó a la primera y cambio necesario. Si el docente espera cinco prompts técnicos, usar cinco consultas reales sobre programación y conservar las entradas administrativas como contexto.
 
 ## Error de IA detectado por la estudiante — pendiente
 
-Describir un error que realmente identifiques, cómo lo reprodujiste y cómo comprobaste la corrección. No inventar un fallo para llenar el requisito. Los problemas del entorno (por ejemplo acceso de red) no constituyen por sí mismos un error del código generado por IA.
+La entrada 4 registra una limitación de usabilidad señalada por la autora y su corrección. Completar con una explicación personal de cómo la identificaste y verificaste. No inventar un fallo para llenar el requisito. Los problemas del entorno (por ejemplo acceso de red) no constituyen por sí mismos un error del código generado por IA.
 
 ## Reflexión personal — pendiente
 

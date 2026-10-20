@@ -21,6 +21,8 @@ Se utilizó **Codex de OpenAI**, mediante esta conversación, para interpretar r
 
 Trabajo realizado sin ayuda de IA, confirmado por la autora: elección del tema de recetas y creación inicial del repositorio. El código producido en esta sesión tiene asistencia de IA. La autora deberá revisarlo, probarlo y poder explicarlo antes de entregarlo; otras aportaciones personales se documentarán cuando se realicen.
 
+La autora también revisó la primera versión visual y pidió aprovechar el ancho de pantalla, alinear los textos y animar el plato; esos ajustes se implementaron con asistencia de IA y se registraron como un prompt real en la bitácora.
+
 ## Ejecución
 
 Requiere Node.js 20 o posterior. No es necesario instalar paquetes ni configurar claves privadas.

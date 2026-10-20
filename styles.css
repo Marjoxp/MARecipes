@@ -51,7 +51,7 @@ button:disabled {
   outline-offset:4px
 }
 .wrap {
-  width:min(1180px,calc(100% - 80px));
+  width:calc(100% - clamp(36px,6vw,160px));
   margin-inline:auto
 }
 .skip-link {
@@ -103,11 +103,11 @@ button:disabled {
 }
 .hero {
   display:grid;
-  grid-template-columns:1fr 1fr;
-  min-height:615px;
+  grid-template-columns:1fr 1.1fr;
+  min-height:clamp(620px,calc(100svh - 100px),850px);
   align-items:center;
-  gap:25px;
-  padding-block:45px 65px
+  gap:clamp(25px,4vw,90px);
+  padding-block:40px 60px
 }
 .eyebrow {
   font-size:10px;
@@ -127,7 +127,7 @@ h1,h2,h3,p {
   margin-top:0
 }
 h1 {
-  font:500 clamp(54px,5.8vw,78px)/1.04 var(--serif);
+  font:500 clamp(58px,6.6vw,120px)/1.04 var(--serif);
   letter-spacing:-2.9px;
   margin-block:23px
 }
@@ -136,10 +136,10 @@ h1 em {
   color:#6e805a
 }
 .hero-description {
-  max-width:350px;
+  max-width:440px;
   line-height:1.8;
   color:var(--muted);
-  font-size:14px;
+  font-size:clamp(14px,1.1vw,18px);
   margin-bottom:27px
 }
 .primary,.secondary {
@@ -174,16 +174,24 @@ h1 em {
   color:var(--muted);
   font-size:10px
 }
+.hero-visual {
+  position:relative;
+  min-width:0;
+  width:100%;
+  max-width:760px;
+  justify-self:end
+}
 .hero-art {
   position:relative;
-  height:480px;
+  width:100%;
+  aspect-ratio:1;
   display:grid;
   place-items:center;
   background:radial-gradient(ellipse,#dedfc4 0%,#ededdc 46%,transparent 70%)
 }
 .art-orbit {
   position:absolute;
-  width:94%;
+  width:88%;
   aspect-ratio:1;
   border:1px solid #c7ccb7;
   border-radius:50%;
@@ -191,106 +199,134 @@ h1 em {
 }
 .plate {
   position:relative;
-  width:340px;
-  height:340px;
+  width:72%;
+  aspect-ratio:1;
+  container-type:inline-size;
   border-radius:50%;
   background:radial-gradient(circle,#dfcfaa 0%,#e6d6b6 52%,#eee5cc 53%,#fbf6e4 65%,#dcd6bd 67%,#f4efda 69%);
   box-shadow:12px 25px 35px #2a392e25;
-  transform:rotate(-18deg)
+  transform:rotate(-18deg);
+  animation:plate-turn 60s linear infinite
+}
+@keyframes plate-turn {
+  from { transform:rotate(-18deg) }
+  to { transform:rotate(342deg) }
+}
+.hero-visual.is-paused .plate {
+  animation-play-state:paused
+}
+.motion-toggle {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:10px auto 0;
+  padding:8px 12px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:transparent;
+  color:var(--muted);
+  font-size:11px
+}
+.motion-toggle:hover {
+  color:var(--green);
+  border-color:var(--green)
 }
 .food {
   position:absolute;
   background:repeating-linear-gradient(25deg,#bd7933 0 9px,#eeb269 10px 22px,#d39149 23px 28px);
   box-shadow:3px 5px 7px #794b2255;
-  width:68px;
-  height:95px;
+  width:20.000%;
+  height:27.941%;
   border-radius:40% 30% 45% 28%
 }
 .food-1 {
-  left:87px;
-  top:78px;
+  left:25.588%;
+  top:22.941%;
   transform:rotate(30deg)
 }
 .food-2 {
-  left:152px;
-  top:92px;
+  left:44.706%;
+  top:27.059%;
   transform:rotate(-20deg)
 }
 .food-3 {
-  left:110px;
-  top:161px;
+  left:32.353%;
+  top:47.353%;
   transform:rotate(70deg)
 }
 .food-4 {
-  left:185px;
-  top:170px;
+  left:54.412%;
+  top:50.000%;
   transform:rotate(20deg)
 }
 .leaf {
   position:absolute;
-  width:78px;
-  height:45px;
+  width:22.941%;
+  height:13.235%;
   border-radius:100% 0 100% 0;
   background:repeating-linear-gradient(30deg,transparent 0 9px,#89a24e 10px 11px),#4c793e;
   box-shadow:2px 3px 5px #27422133
 }
 .leaf-1 {
-  top:55px;
-  left:180px;
+  top:16.176%;
+  left:52.941%;
   transform:rotate(35deg)
 }
 .leaf-2 {
-  top:213px;
-  left:67px;
+  top:62.647%;
+  left:19.706%;
   transform:rotate(-32deg)
 }
 .leaf-3 {
-  top:145px;
-  left:223px;
+  top:42.647%;
+  left:65.588%;
   transform:rotate(90deg)
 }
 .tomato {
   position:absolute;
   background:radial-gradient(circle at 35% 30%,#f88e5b,#ba4227);
-  width:40px;
-  height:40px;
+  width:11.765%;
+  height:11.765%;
   border-radius:50%;
   box-shadow:3px 4px 4px #67392544
 }
 .tomato-1 {
-  left:60px;
-  top:127px
+  left:17.647%;
+  top:37.353%
 }
 .tomato-2 {
-  left:190px;
-  top:239px
+  left:55.882%;
+  top:70.294%
 }
 .lemon {
   position:absolute;
-  left:217px;
-  top:65px;
+  left:63.824%;
+  top:19.118%;
   color:#fff5a0;
   background:#e7bd3f;
-  border:4px solid #efd36b;
-  width:58px;
-  height:58px;
+  border:1.18cqi solid #efd36b;
+  width:17.059%;
+  height:17.059%;
   border-radius:50%;
   text-align:center;
-  font-size:42px;
-  line-height:48px
+  font-size:12.35cqi;
+  line-height:1;
+  display:grid;
+  place-items:center
 }
 .art-label {
   position:absolute;
-  top:12px;
-  right:25px;
-  font-size:9px;
-  letter-spacing:2px;
-  transform:rotate(12deg)
+  top:0;
+  left:0;
+  right:0;
+  text-align:center;
+  font-size:clamp(9px,.8vw,12px);
+  letter-spacing:2px
 }
 .recipe-note {
   position:absolute;
-  bottom:52px;
-  left:4px;
+  bottom:10%;
+  left:0;
   display:flex;
   align-items:center;
   gap:15px;
@@ -299,7 +335,6 @@ h1 em {
   border:1px solid var(--line);
   border-radius:9px;
   box-shadow:0 8px 20px #2233220a;
-  transform:rotate(-5deg);
   font:500 17px var(--serif)
 }
 .recipe-note>span {
@@ -314,10 +349,12 @@ h1 em {
 }
 .art-caption {
   position:absolute;
-  bottom:10px;
-  right:5px;
-  font-size:9px;
-  letter-spacing:1.8px
+  bottom:0;
+  left:0;
+  right:0;
+  text-align:center;
+  font-size:clamp(9px,.8vw,12px);
+  letter-spacing:2px
 }
 .ingredients-strip {
   background:#e9eddf;
@@ -436,7 +473,7 @@ h2 {
 }
 .recipe-grid {
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));
   gap:28px 24px
 }
 .recipe-card {
@@ -624,24 +661,11 @@ body:has(dialog[open]) {
     min-height:530px
   }
   .hero-art {
-    height:390px
-  }
-  .plate {
-    width:340px;
-    height:340px;
-    transform:scale(.85) rotate(-18deg)
-  }
-  .art-label {
-    font-size:8px;
-    right:0
-  }
-  .art-caption {
-    font-size:8px
+    min-height:0
   }
   .recipe-note {
-    left:-10px;
-    bottom:25px;
-    padding:12px
+    padding:12px;
+    font-size:14px
   }
   .recipe-grid {
     grid-template-columns:repeat(2,minmax(0,1fr))
@@ -676,7 +700,8 @@ body:has(dialog[open]) {
   .hero {
     grid-template-columns:1fr;
     padding-top:35px;
-    gap:15px;
+    gap:35px;
+    min-height:0;
     padding-bottom:35px
   }
   .hero-copy {
@@ -689,28 +714,19 @@ body:has(dialog[open]) {
     max-width:310px
   }
   .hero-art {
-    height:330px;
-    width:100%;
-    max-width:400px;
-    margin:auto
+    width:100%
+  }
+  .hero-visual {
+    max-width:440px;
+    justify-self:center
   }
   .art-orbit {
     width:88%;
-    max-width:310px
-  }
-  .plate {
-    transform:scale(.79) rotate(-18deg)
-  }
-  .art-label {
-    top:7px;
-    right:0
   }
   .recipe-note {
-    bottom:10px;
-    left:0
-  }
-  .art-caption {
-    display:none
+    bottom:11%;
+    padding:10px 12px;
+    font-size:13px
   }
   .ingredients-strip .wrap {
     padding-block:16px;
@@ -804,6 +820,10 @@ body:has(dialog[open]) {
     scroll-behavior:auto
   }
   * {
-    transition:none!important
+    transition:none!important;
+    animation:none!important
+  }
+  .motion-toggle {
+    display:none
   }
 }

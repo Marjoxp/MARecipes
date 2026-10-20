@@ -5,6 +5,16 @@ const recipes = $('#recipes');
 const status = $('#status');
 const dialog = $('#recipe-dialog');
 const detail = $('#recipe-detail');
+const motionToggle = $('#motion-toggle');
+motionToggle.addEventListener('click', () => {
+  const paused = $('.hero-visual').classList.toggle('is-paused');
+  motionToggle.setAttribute('aria-pressed', String(paused));
+  motionToggle.replaceChildren(document.createTextNode(paused ? 'Reanudar giro ' : 'Pausar giro '));
+  const icon = document.createElement('span');
+  icon.setAttribute('aria-hidden', 'true');
+  icon.textContent = paused ? '▷' : 'Ⅱ';
+  motionToggle.append(icon);
+});
 let requestVersion = 0;
 let detailVersion = 0;
 let retryAction;

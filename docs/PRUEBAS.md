@@ -37,6 +37,8 @@ La desconexión y HTTP 429 se verificaron con simulaciones automatizadas; no se 
 
 ## Repetición manual
 
+Actualización visual: se comprobó el ancho a 1920 px (contenido de aproximadamente 1790 px y cinco columnas de recetas) y a 390 px, sin desbordamiento horizontal. Las etiquetas del plato permanecen rectas y visibles en móvil. El botón de animación cambió el estado CSS entre `paused` y `running`. La hoja de estilos desactiva la animación con `prefers-reduced-motion: reduce`. Se guardaron capturas actualizadas de portada y plato en móvil. La comprobación de sintaxis pasó después de estos cambios.
+
 1. Ejecutar `npm start`, abrir la dirección local y esperar recetas.
 2. Buscar `cake`, abrir una tarjeta y comprobar ingredientes e instrucciones.
 3. Cerrar con Escape y cambiar a Pasta.

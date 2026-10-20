@@ -21,9 +21,21 @@ Este archivo aún no satisface los cinco prompts ni sustituye la reflexión de l
 
 **Resultado de la implementación posterior:** aplicación en HTML, CSS y JavaScript, peticiones a TheMealDB, búsqueda, categorías, detalle y aleatorio. Las 11 pruebas automatizadas pasaron. Se verificaron consultas reales en navegador. En la revisión visual, la IA detectó y corrigió un desbordamiento horizontal de la decoración; el detalle está en PRUEBAS.md. Este hallazgo lo detectó la IA, por lo que no se atribuye a la estudiante.
 
+## Entrada 3 — ajuste visual solicitado por la estudiante
+
+**Prompt literal:**
+
+> Muy bien, unos detalles, aprovecha todo el espacio de la pantalla, está todo muy centrado en ele medio, los textos de "Hecho con curiosidad" y "Tu próxima receta está aquí" ponlos de una manera  uniforme y derecha, puede ser a un lado, o que esté al rededor del plato siguiendo su forma, es decir circular, y creo que podemos agregar alguna animación con ese plato, como que gire o cambien, lo que se adapte mejor
+
+**Respuesta:** se eliminó el ancho máximo general de 1180 px, se amplió la portada y se adaptaron las columnas de recetas al ancho disponible. Los dos textos quedaron horizontales y centrados encima y debajo del plato. Se agregó giro lento con botón de pausa y respeto a la preferencia de movimiento reducido.
+
+**¿Funcionó a la primera?** La revisión inicial confirmó el nuevo ancho y la pausa. Al convertir las medidas del plato a porcentajes, la IA también convirtió por error el interlineado del limón y desplazó su símbolo. Se corrigió centrando ese símbolo con CSS Grid. Fue un fallo detectado por la IA durante su revisión, no por la estudiante. Se repitieron las comprobaciones visuales y de ancho después del ajuste.
+
+**Aportación de la estudiante:** revisión visual de la primera versión, identificación del exceso de espacio lateral y propuesta de alinear los textos y animar el plato.
+
 ## Próximas entradas — pendientes
 
-Registrar al menos tres prompts adicionales que la estudiante realmente envíe durante revisión, pruebas o aprendizaje del código. Para cada uno: texto literal, respuesta resumida, si funcionó a la primera y cambio necesario. Si el docente espera cinco prompts técnicos, usar cinco consultas reales sobre programación y conservar estas entradas como contexto.
+Registrar al menos dos prompts adicionales que la estudiante realmente envíe durante revisión, pruebas o aprendizaje del código. Para cada uno: texto literal, respuesta resumida, si funcionó a la primera y cambio necesario. Si el docente espera cinco prompts técnicos, usar cinco consultas reales sobre programación y conservar estas entradas como contexto.
 
 ## Error de IA detectado por la estudiante — pendiente
 
